@@ -13,6 +13,8 @@
 		CFD05A7326FC5BA4007C1A04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD05A7126FC5BA4007C1A04 /* Main.storyboard */; };
 		CFD05A7526FC5BA7007C1A04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD05A7426FC5BA7007C1A04 /* Assets.xcassets */; };
 		CFD05A7826FC5BA7007C1A04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD05A7626FC5BA7007C1A04 /* LaunchScreen.storyboard */; };
+		CFD05A8126FC5BF0007C1A04 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = CFD05A8026FC5BF0007C1A04 /* SideMenu */; };
+		CFD05A8626FC646A007C1A04 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD05A8526FC646A007C1A04 /* SideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		CFD05A7426FC5BA7007C1A04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFD05A7726FC5BA7007C1A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFD05A7926FC5BA7007C1A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD05A8526FC646A007C1A04 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFD05A8126FC5BF0007C1A04 /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +62,22 @@
 			children = (
 				CFD05A6B26FC5BA4007C1A04 /* AppDelegate.swift */,
 				CFD05A6D26FC5BA4007C1A04 /* SceneDelegate.swift */,
-				CFD05A6F26FC5BA4007C1A04 /* ViewController.swift */,
+				CFD05A8226FC5C58007C1A04 /* Controllers */,
 				CFD05A7126FC5BA4007C1A04 /* Main.storyboard */,
 				CFD05A7426FC5BA7007C1A04 /* Assets.xcassets */,
 				CFD05A7626FC5BA7007C1A04 /* LaunchScreen.storyboard */,
 				CFD05A7926FC5BA7007C1A04 /* Info.plist */,
 			);
 			path = sidemenuintro2;
+			sourceTree = "<group>";
+		};
+		CFD05A8226FC5C58007C1A04 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFD05A6F26FC5BA4007C1A04 /* ViewController.swift */,
+				CFD05A8526FC646A007C1A04 /* SideMenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = sidemenuintro2;
+			packageProductDependencies = (
+				CFD05A8026FC5BF0007C1A04 /* SideMenu */,
+			);
 			productName = sidemenuintro2;
 			productReference = CFD05A6826FC5BA4007C1A04 /* sidemenuintro2.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +127,9 @@
 				Base,
 			);
 			mainGroup = CFD05A5F26FC5BA4007C1A04;
+			packageReferences = (
+				CFD05A7F26FC5BF0007C1A04 /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = CFD05A6926FC5BA4007C1A04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +160,7 @@
 				CFD05A7026FC5BA4007C1A04 /* ViewController.swift in Sources */,
 				CFD05A6C26FC5BA4007C1A04 /* AppDelegate.swift in Sources */,
 				CFD05A6E26FC5BA4007C1A04 /* SceneDelegate.swift in Sources */,
+				CFD05A8626FC646A007C1A04 /* SideMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFD05A7F26FC5BF0007C1A04 /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFD05A8026FC5BF0007C1A04 /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFD05A7F26FC5BF0007C1A04 /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFD05A6026FC5BA4007C1A04 /* Project object */;
 }
